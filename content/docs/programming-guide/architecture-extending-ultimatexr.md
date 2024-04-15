@@ -47,8 +47,31 @@ When implementing new locomotion components and features, it's recommended to re
 
 ## New UxrGrabPointShape
 
+Grab points within grabbable objects are designated locations from which objects can be grasped.
+Grab point shapes enable a single grab point to be expanded into a shape that conforms to the contours of the object, providing more flexibility to the grabbing process.
 
+Grab point shapes are implemented deriving from `UxrGrabPointShape` and overriding the following methods:
+
+```c#
+public abstract float GetDistanceFromGrabber(UxrGrabber grabber, Transform snapTransform, Transform objectDistanceTransform, Transform grabberDistanceTransform);
+public abstract void GetClosestSnap(UxrGrabber grabber, Transform snapTransform, Transform distanceTransform, Transform grabberDistanceTransform, out Vector3 position, out Quaternion rotation);
+```
+
+`GetDistanceFromGrabber()` returns the distance from a grabber to the shape:
+  - `grabber` is the `UxrGrabber` component to compute the distance from.
+  - `snapTransform` is the original grab point `Transform` on the grabbable object to snap the grabber to.
+  - `objectDistanceTransform` is the `Transform` on the grabbable object that is used to compute the distance from the grabber to the grab point.
+  - `grabberDistanceTransform` is the `Transform` on the grabber that is used to compute the distance to the `UxrGrabbableObject`. It normally is the grabber itself, placed on the palm, but additional points can be defined to specify distances from other parts in the hand such as the finger tips.
+  
+  `GetClosestSnap()` returns the most suitable snap position and rotation for a given grabber:
+  - `grabber`, `snapTransform`, `distanceTransform` and `grabberDistanceTransform` are the same parameters as `GetDistanceFromGrabber()`.
+  - `position` (`out`) will return the snap position.
+  - `rotation` (`out`) will return the snap rotation.
+  
+When implementing a new grab point shape, it's recommended to review the existing components located at /Scripts/Manipulation for reference.
 
 ## New Multiplayer SDK
+
+
 
 ## New UxrAvatarController
