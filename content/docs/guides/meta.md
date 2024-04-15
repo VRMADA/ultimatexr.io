@@ -1,14 +1,16 @@
 ---
-title: "Oculus"
+title: "Meta Quest"
 ---
 
-# Oculus
+# Meta Quest
 
-## Installing and setting up Oculus support
+## Installing and setting up Meta Quest support
 
-Open the UltimateXR SDK Manager using the menu Tools -> UltimateXR -> SDK Manager. Click Get SDK under the Oculus section. This will open the link to add the Oculus Integration to your assets:
+Open the UltimateXR SDK Manager using the menu Tools -> UltimateXR -> SDKs -> SDK Manager. 
 
-![](/docs/guides/media/supported-platforms/Oculus01AssetStore.png)
+Click Get SDK under the Meta section. This will open the link to add the Meta XR Core SDK to your assets:
+
+![](/docs/guides/media/supported-platforms/Meta01AssetStore.png)
  
 Now go back to Unity and open the Package Manager using the menu Window -> Package Manager.
 
@@ -16,15 +18,15 @@ Select “My Assets” from the top drop-down window:
 
 ![](/docs/guides/media/supported-platforms/Oculus02MyAssets.png)
  
-Now navigate to the Oculus Integration asset and select Import. After importing Oculus may ask you to update.
+Now navigate to the Meta XR Core SDK asset and select Install. After installing, import the Meta XR Core SDK package.
 
-![](/docs/guides/media/supported-platforms/Oculus03PackageManager.png)
+![](/docs/guides/media/supported-platforms/Meta03PackageManager.png)
  
 Now go to Edit -> Project Settings and enable Oculus support in the desktop platform. Also check Oculus support in the Android tab if you plan to create builds for Quest:
 
 ![](/docs/guides/media/supported-platforms/Oculus04Management1.png)
  
-## Creating a build for Oculus Quest
+## Creating a build for Meta Quest
 
 Switch your platform to Android using File -> Build Settings.
 
@@ -32,7 +34,7 @@ Switch your platform to Android using File -> Build Settings.
  
 Create a compatible Manifest file using the Oculus menu on top.
 
-![](/docs/guides/media/supported-platforms/Oculus06Manifest.png)
+![](/docs/guides/media/supported-platforms/Meta06Manifest.png)
 
 Now create the .apk file for Android using File -> Build Settings -> Build
 
