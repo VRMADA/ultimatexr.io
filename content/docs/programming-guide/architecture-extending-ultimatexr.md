@@ -72,6 +72,27 @@ When implementing a new grab point shape, it's recommended to review the existin
 
 ## New Multiplayer SDK
 
+UltimateXR has an extensible multiplayer design, with the goal to make it easy to add new SDKs and platforms.
+Multiplayer has two distinct phases where new platforms are required to provide support.
+- Edit time: Developers implement a derived class from `UxrNetworkImplementation`. This class handles the creation of platform-specific components and provides additional functionality for runtime operations.
+- Runtime: Developers create a new network avatar component that implements the `IUxrNetworkAvatar` interface. This component primarily handles RPC synchronization support during runtime.
 
+### Edit Time
+
+Through the `UxrNetworkManager` inspector, the framework automates the creation and setup of platform-specific components. Users will not be required to manually add components such as NetworkObject, NetworkTransform, NetworkRigidbody or similar.
+
+Switching between platforms is seamless, `UxrNetworkManager` will keep track of the components that need to be created and destroyed. It identifies which components, instances or prefabs need setup.
+
+Behind the scenes, the network manager relies on different implementations of `UxrNetworkImplementation`, such as `UxrUnityNetCodeNetwork`, `UxrFishNetNetwork` or `UxrPhotonFusionNetwork`. These implementations provide simple methods that add platform-specific components to an object.
+
+### Runtime
+
+At runtime, the avatar component that implements `IUxrNetworkAvatar` is responsible for providing the connection support and RPC synchronization messages.
+
+### Voice Over Network
+
+Voice over network implementations only require to implement a new `UxrNetworkVoiceImplementation` class.
+
+We recommend reviewing the existing multiplayer implementations which can be found in the /Scripts/Networking/Integrations.
 
 ## New UxrAvatarController
