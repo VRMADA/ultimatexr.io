@@ -3,7 +3,7 @@ title: "Creating a Custom Avatar"
 ---
 
 # Creating a Custom Avatar
-
+(Example for the Submitting a Simple Edit article)
 You may also want to set up a custom avatar using your own rig and graphics. We have put special effort into providing a simple yet powerful way to set up your own avatar.
 
 It all starts by creating an empty GameObject placed at floor level. Add an UxrAvatar component to it.
