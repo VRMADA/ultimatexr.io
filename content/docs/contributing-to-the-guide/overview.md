@@ -18,7 +18,7 @@ UltimateXR is an open-source framework, and its documentation is no different. E
 
 This section contains everything you need to get started:
 
-- [**Submitting a Single Edit**](/docs/contributing-to-the-guide/submitting-a-single-edit): fix a typo or small error directly in your browser using the **Edit this page on GitHub** link. No local setup needed.
+- [**Submitting a Single Edit**](/docs/contributing-to-the-guide/submitting-a-simple-edit): fix a typo or small error directly in your browser using the **Edit this page on GitHub** link. No local setup needed.
 - [**Submitting a New Article**](/docs/contributing-to-the-guide/submitting-a-new-article): create a new page, add it to the menu, work on the `dev` branch, and preview your changes locally before sending them in.
 - [**Guidelines**](/docs/contributing-to-the-guide/guidelines): writing style, formatting rules, and conventions to follow so the documentation stays consistent.
 

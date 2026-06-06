@@ -27,7 +27,7 @@ Check the [Extending UltimateXR](/docs/programming-guide/architecture/extending-
 
 Clear and comprehensive documentation is key to a successful project. Help us improve our documentation by fixing errors, adding examples, or suggesting clarifications.
 
-- To fix a typo or small error directly in the browser with no local setup, see [Submitting a Single Edit](/docs/contributing-to-the-guide/submitting-a-single-edit).
+- To fix a typo or small error directly in the browser with no local setup, see [Submitting a Simple Edit](/docs/contributing-to-the-guide/submitting-a-simple-edit).
 - To write a new article or make larger changes with a live local preview, see [Submitting a New Article](/docs/contributing-to-the-guide/submitting-a-new-article).
 - To keep your writing consistent with the rest of the documentation, check the [Guidelines](/docs/contributing-to-the-guide/guidelines).
 

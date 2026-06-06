@@ -87,7 +87,7 @@ and
 
 {{% callout info %}}
 Normally custom components use `AvatarsUpdated` event to make sure the code is executed after UltimateXR finished updating.
-For components using grababble objects there are specific events detailed in the [manipulation guide](/docs/programming-guide/manipulation/update).
+For components using grababble objects there are specific events detailed in the [manipulation guide](/docs/programming-guide/manipulation/events).
 {{% /callout %}}
 
 ### Precaching Events

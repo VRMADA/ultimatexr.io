@@ -6,7 +6,7 @@ title: "Guidance Programming Guide"
 
 The **guidance system** in UltimateXR provides visual hints to guide the user towards targets in the VR environment. It uses a compass-style indicator that appears in front of the user's view, pointing towards the target when it is not visible. Once the target comes into sight, optional action icons can be displayed on top of it.
 
-This guide offers a programmatic perspective. For detailed instructions on setting up components in Unity, please refer to the [Guidance User Guide](/docs/guides/overview). You can also check the [Guides API Reference](/api/N_UltimateXR_Guides).
+This guide offers a programmatic perspective. You can also check the [Guides API Reference](/api/N_UltimateXR_Guides).
 
 ## Key Components
 

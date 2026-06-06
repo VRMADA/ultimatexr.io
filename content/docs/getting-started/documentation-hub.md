@@ -51,7 +51,7 @@ Here you can find a curated selection of recommended articles and tutorials, org
 
 The [Programming Guide](/docs/programming-guide/overview) contains a collection of articles to help you learn various aspects of programming with UltimateXR. For detailed information on specific functions and classes, check out the [API Guide](/api).
 
-A key resource is the [How do I...?](/docs/programming-guide/how-do-i) section, which is a collection of frequently asked questions and practical coding solutions.
+A key resource is the [How do I...?](/docs/programming-guide/how-do-i/overview) section, which is a collection of frequently asked questions and practical coding solutions.
 
 This is the suggested reading for programmers, organized by the required skill level:
 
@@ -73,8 +73,8 @@ This is the suggested reading for programmers, organized by the required skill l
 - [Animation](/docs/programming-guide/other-features/animation): Learn how to use UltimateXR's animation components.
 
 ### Advanced
-- [Serialization](/docs/programming-guide/architecture/other-features/serialization): Learn how data serialization works in UltimateXR.
-- [State Serialization and Synchronization](/docs/programming-guide/architecture/state-serialization-and-synchronization/introduction): Learn the common architecture that enables multiplayer, state saving and replays.
+- [Serialization](/docs/programming-guide/other-features/serialization): Learn how data serialization works in UltimateXR.
+- [State Serialization and Synchronization](/docs/programming-guide/state-serialization-and-synchronization/introduction): Learn the common architecture that enables multiplayer, state saving and replays.
 - [Handling Manipulation Constraints](/docs/programming-guide/manipulation/handling-constraints): Learn how to process constraint events from grabbable objects to create advanced manipulation logic.
 - [UxrGrabbableObjectComponent](/docs/programming-guide/manipulation/uxrgrabbableobjectcomponent): Inherit from UxrGrabbableObjectComponent to create manipulation logic in a clean and easy way.
 - [Extending UltimateXR](/docs/programming-guide/architecture/extending-ultimatexr): Find out how to extend UltimateXR with custom functionality.
@@ -85,5 +85,6 @@ Coming soon!
 
 ## Need Help?
 
-- Check the [Common Errors](/docs/troubleshooting/common-errors) and [Frequently Asked Questions](/docs/troubleshooting/frequently-asked-questions) for common questions and answers.
+- Check the [Common Errors](/docs/troubleshooting/common-errors) page for help with common issues.
+- Check the [FAQ](/docs/faq/frequently-asked-questions) page for frequently asked questions and answers.
 - Visit our [Discord Server](https://discord.gg/GXHdneaFjA) for discussions and troubleshooting.
