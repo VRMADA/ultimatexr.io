@@ -26,7 +26,7 @@ In these cases, UltimateXR developers can choose how to to implement new multipl
 
 ### Cons of using the UltimateXR Sync API:
   - **Familiarity with Native APIs**: Developers may be more familiar with the networking API of their chosen system.
-  - **No Built-in Anti-Cheating Support Yet**: The current version lacks built-in anti-cheating mechanisms, but this feature is planned for future releases.
+  - **No Built-in Anti-Cheating Support Yet**: The current version does not include built-in anti-cheating mechanisms. This feature is planned for future releases. For sensitive or competitive applications, **use the encryption and security** features provided by your networking system to protect transmitted data and reduce the risk of tampering.
 
 ### Additional Notes:
 Certain aspects of network programming, such as lobbies, match-making, and connections, have intentionally been left to the native networking system. These parts are highly specific to each application and are currently beyond the scope of UltimateXR. However, during development, the Prototyping UI provided by UltimateXR for each supported networking module offers a quick solution for testing multiplayer features.
