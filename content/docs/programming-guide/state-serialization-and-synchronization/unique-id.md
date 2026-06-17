@@ -118,15 +118,29 @@ The instance manager in UltimateXR is the `UxrInstanceManager` singleton. Withou
 Instantiating a prefab in UltimateXR using the `UxrInstanceManager` is pretty straightforward:
 ```c#
 // prefab is a GameObject, parent is a Transform, pos is a Vector3 and rot is a Quaternion.
-GameObject instance = UxrInstanceManager.Instance.InstantiateGameObject(prefab, parent, pos, rot);
+GameObject instance = UxrInstanceManager.Instance.InstantiatePrefab(prefab, parent, pos, rot);
 ```
 
-All instantiable prefabs are automatically detected by the `UxrInstanceManager`. They are visible on the inspector panel:
+Instantiable prefabs need to be registered in the `UxrInstanceManager`. They can be assigned in the inspector using prefab lists:
 
 ![](/media/docs/programming-guide/state-serialization-and-synchronization/unique-id/UxrInstanceManager.png)
 
+Prefabs can also be registered at runtime using `RegisterPrefab()`, `RegisterPrefabList()` or `RegisterPrefabLists()`.
+
+{{% callout caution %}}
+When registering prefabs from code, remember to unregister them using the `Unregister` methods in `UxrInstanceManager`.
+{{% /callout %}}
+
+For scene-specific prefab lists, you can also add a `UxrScenePrefabLists` component to the scene. It will register its `UxrPrefabList` entries when the scene is loaded and unregister them when it is destroyed. Prefabs are loaded when they are instantiated in a scene or referenced by a component, so each scene loads only the prefabs it actually uses. This helps keep memory usage to a minimum.
+
+{{% callout caution %}}
+Avoid putting all the prefab lists in your startup scene. This would load all prefabs at startup, even if they are only used by specific scenes.
+{{% /callout %}}
+
+Registered prefabs require at least one component implementing `IUxrUniqueId` on the root GameObject, such as any `UxrComponent` or a `UxrSyncObject`.
+
 The `UxrInstanceManager` can be added to a GameObject in the startup/main scene. In applications with multiplayer support, the `UxrNetworkManager` will take care of adding the `UxrInstanceManager` if it's not present.
-More in-depth information about the`UxrInstanceManager` can be found in the guide and API section of the documentation.
+More in-depth information about the `UxrInstanceManager` can be found in the guide and API section of the documentation.
 
 How does the `UxrInstanceManager` register the instantiation across all systems so that the instantiation can occur in multiplayer, replays or saved in a save game? The answer is it uses both StateSave and StateSync functionality.
 - **StateSave**: Saving which prefabs have been instantiated and which instances have been destroyed since the scene was loaded. The instance manager will take care of creating or destroying the appropriate objects when a new state is loaded.
