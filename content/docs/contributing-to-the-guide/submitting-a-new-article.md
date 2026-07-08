@@ -47,24 +47,24 @@ assets/media/docs/contributing-to-the-guide/my-new-article/
 
 If the article should appear in the sidebar, add a new entry to `data/docs.yaml` in the section that matches the article category.
 
-For example, a new page under `Contributing to the Guide` would look like this:
+For example, if you create `content/docs/contributing-to-the-guide/your-new-article-here.md`, add a matching item under `Contributing to the Guide` like this:
 
 ```yaml
 - title: "Contributing to the Guide"
   items:
     - title: "Overview"
       url: "/docs/contributing-to-the-guide/overview"
-      label: "ready"
     - title: "Submitting a Simple Edit"
       url: "/docs/contributing-to-the-guide/submitting-a-simple-edit"
-      label: "ready"
     - title: "Submitting a New Article"
       url: "/docs/contributing-to-the-guide/submitting-a-new-article"
-      label: "ready"
     - title: "Guidelines"
       url: "/docs/contributing-to-the-guide/guidelines"
-      label: "ready"
+    - title: "Your New Article Here"
+      url: "/docs/contributing-to-the-guide/your-new-article-here"
 ```
+
+The `title` is the text shown in the sidebar, and the `url` must match the article slug you chose for the `.md` file. If the article needs images or videos, create a matching folder under `assets/media/docs/contributing-to-the-guide/your-new-article-here/`.
 
 If you are adding a brand-new top-level section, add a new block with a `title` and `items` list. If you are adding a page to an existing section, just insert a new item in the right place.
 
